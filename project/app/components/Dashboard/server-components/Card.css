@@ -53,3 +53,6 @@
     overflow: hidden;
 }
 
+.cover{
+    cursor: pointer;
+}
