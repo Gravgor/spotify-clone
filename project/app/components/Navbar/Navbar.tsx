@@ -4,10 +4,11 @@ import styled from "styled-components";
 export const StyledBackground = styled.div`
     background-color: #1E1E1E;
     height: 80px;
-    width: 100%;
+    width: 89%;
     color: #fff;
-    position: sticky;
+    position: absolute;
     top: 0;
+    left: 240px;
     z-index: 999;
 `
 
@@ -31,7 +32,6 @@ export const StyledNavBarText = styled.p`
     &:hover{
         color: #1DB954;
         transition: 0.2s ease-in-out;
-        cursor: pointer;
     }
     
 `

@@ -4,6 +4,8 @@ import RootStyleRegistry from "./RootStyleRegistry";
 
 import localFont from '@next/font/local'
 import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import './style/Global.css'
 
 const spotifyFont = localFont({
   src: './components/assets/fonts/GothamBook.ttf',
@@ -24,7 +26,10 @@ export default function RootLayout({
       <head></head>
       <body>
         <RootStyleRegistry>
-          <Navbar/>
+          <Navbar />
+        </RootStyleRegistry>
+        <RootStyleRegistry>
+          <Sidebar/>
         </RootStyleRegistry>
         <RootStyleRegistry>
           {children}
