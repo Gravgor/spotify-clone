@@ -1,0 +1,268 @@
+
+.playListPage{
+    position: absolute;
+    top: 7%;
+    left: 11%;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.playListPage__header{
+    background: none;
+    height: 500px!important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1rem;
+}
+
+.playListPage__header__title{
+    background: none;
+    color: #fff;
+    font-size: 0.8rem;
+    position: relative;
+    top: 90px;
+    left: 33px;
+   
+}
+
+.playListPage__header__subtitle{
+    background: none;
+    color: #fff;
+    font-size: 6rem;
+    font-weight: bold;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+.playListPage__header__description{
+    background: none;
+    color: #6C6C6C;
+    font-size: 1.2rem;
+    position: relative;
+    top: -70px;
+    left: 30px;
+}
+
+.playlistPage_header_footer{
+    background: none;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    top: -110px;
+    left: -10px;
+}
+
+.playlistPage_header_footer__list{
+    background: none;
+}
+
+.playlistPage_header_footer__list__item{
+    background: none;
+    color: #fff;
+}
+
+.playListPage__body{
+    background: none;
+    position: absolute;
+    top: 400px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.playListPage__body__tracks_header{
+    background: none;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+
+.playListPage__body__tracks_header__icon{
+    background: none;
+    color: #1DB954;
+    position: relative;
+    left: 50px;
+}
+
+.playListPage__body__tracks_header__icon_play{
+    background: none;
+    color: #1DB954;
+    position: relative;
+    left: 50px;
+    border-radius: 50%;
+}
+
+.playListPage__body__tracks_header__icon_play:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    box-shadow: 0 0 10px #1DB954;
+}
+
+.playListPage__body__tracks{
+    background: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    top: 15%;
+    left: 2%;
+}
+
+.playListPage__body__tracks__list_header{
+    background: none;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    position: relative;
+    top: -10px;
+    left: 20px;
+    border-bottom: 1px solid #6C6C6C;
+}
+.playListPage__body__tracks__list_header__title_title{
+    background: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    left: -30px;
+}
+
+.playListPage__body__tracks__list_header__title{
+    background: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.playListPage__body__tracks__list_header__title_margin{
+    margin-left: 340px;
+    background: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    left: 30px;
+}
+
+.playListPage__body__tracks__list{
+    background: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    left: -10px;
+}
+
+.track-item{
+    width: 100%;
+    height: 80px;
+    background: none;
+    position: relative;
+    left: 30px;
+    display: flex;
+    gap: 400px;
+}
+
+.track-item:hover{
+    color: #fff;
+    transition: 0.3s;
+}
+
+.index_trackname_artist__index{
+    background: none;
+}
+
+.index_trackname_artist__trackname{
+    background: none;
+}
+.index_trackname_artist__artist{
+    background: none;
+    position: relative;
+    text-align: left;
+    left: -20px;
+    color: #6C6C6C;
+}
+
+.column{
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+.index_trackname_artist{
+    background: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+    gap: 20px;
+    display: flex;
+}
+
+.album{
+    background: none;
+    color: #6C6C6C;
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+    gap: 20px;
+    display: flex;
+    overflow-y: hidden;
+}
+
+.album:hover{
+    text-decoration: underline;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.album__name{
+    background: none;
+}
+
+.album-link{
+    background: none;
+    color: #6C6C6C;
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    overflow-y: hidden;
+}
+
+.album-link:hover{
+    text-decoration: underline;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}

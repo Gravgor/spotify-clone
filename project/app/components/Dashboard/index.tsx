@@ -16,6 +16,7 @@ export async function getPlaylist(id: string){
 }
 
 
+
 export default async function Dashboard(){
     const playlist = await userPlaylists()
     return (
@@ -32,10 +33,7 @@ export default async function Dashboard(){
                         />
                     )
                 })}
-            </div>
-            <h1 className="dashBoardTitle2">Koncentracja </h1>
-            
-                     
+            </div>                   
         </div>
     )
 }
