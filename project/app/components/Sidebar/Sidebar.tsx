@@ -10,8 +10,9 @@ background-color: #000000;
 width: 240px;
 height: 100vh;
 z-index: 1;
-opacity: 0.9;
+opacity: 1;
 overflow: hidden;
+box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 `
 
 export const StyledSidebarLogo = styled.div`
