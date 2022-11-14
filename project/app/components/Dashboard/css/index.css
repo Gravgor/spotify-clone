@@ -46,3 +46,20 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+
+.dashBoardContentPlaylists__noPlaylists{
+    position: absolute;
+    top: 12%;
+    left: 3%;
+    width: 100%;
+    height: 90%;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}

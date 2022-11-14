@@ -1,11 +1,11 @@
 import Dashboard from "./components/Dashboard";
 
 
-export default function MainPage(){
+export default function mainPage(){
     return (
-       <>
-       <Dashboard />
-       
-       </>
+        <div>
+            <Dashboard/>
+        </div>
     )
+
 }

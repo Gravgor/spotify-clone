@@ -6,8 +6,14 @@ const client = new PocketBase('http://127.0.0.1:8090');
 
 
 async function userPlaylists(){
-    const resultList = await client.records.getList('playLists');
-    return resultList?.items as any[];
+    const resultList = await fetch('http://localhost:3000/api/playlist', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    const result = await resultList.json()
+    return result
 }
 
 export async function getPlaylist(id: string){
@@ -23,16 +29,18 @@ export default async function Dashboard(){
         <div className="dashBoardContainer">
             <h1 className="dashBoardTitle">Spotify Playlists</h1>
             <div className="dashBoardContentPlaylists">
-                {playlist.map((playlist: any) => {
-                    return (
-                        <PlaylistCard 
-                            key={playlist.id}
-                            id={playlist.id}
-                            name={playlist.playlistName}
-                            description={playlist.playlistDescription}
-                        />
-                    )
-                })}
+                {playlist.length > 0 ? playlist.map((playList: any) => {
+                    {playlist.map((playlist: any) => {
+                        return (
+                            <PlaylistCard 
+                                key={playlist.id}
+                                id={playlist.id}
+                                name={playlist.playlistName}
+                                description={playlist.playlistDescription}
+                            />
+                        )
+                    })}
+                }) : <h1 className="dashBoardContentPlaylists__noPlaylists">Brak playlist</h1>}
             </div>                   
         </div>
     )
