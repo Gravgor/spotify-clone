@@ -1,9 +1,10 @@
-import { getPlaylist } from "../../components/Dashboard";
+
 import './css/index.css'
 
 import { AiFillPlayCircle,AiOutlineHeart } from 'react-icons/ai'
 import { BsThreeDots } from 'react-icons/bs'
 import Link from "next/link";
+import { getPlaylist } from '../../components/Dashboard';
 
 
 export default async function PlaylistPage({params} : any){

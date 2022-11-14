@@ -2,7 +2,7 @@
     import {useMemo, useState} from 'react'
     import Image from 'next/image'
     import Link from 'next/link'
-    import spotifyLogo from '../assets/logo/spotify.png'
+    import spotifyLogo from '../../assets/logo/spotify.png'
     import { SideBarA, StyledSidebar, StyledSideBarList, StyledSidebarLogo,StyledSideBarListTwo,SideBarATwo, StyledSideBarPlaylists, StyledFooterSideBar, StyledFooterSideBarText } from "./Sidebar"
     import {AiFillHome} from 'react-icons/ai'
     import {BsMusicNoteList} from 'react-icons/bs'
@@ -29,8 +29,8 @@
                     />
                 </StyledSidebarLogo>
                 <StyledSideBarList>
-                    <Link className='links' href="/" 
-                    onClick={() => setLocation('/')}
+                    <Link className='links' href="/dashboard"
+                    onClick={() => setLocation('/dashboard')}
                     >
                             <AiFillHome size={30} style={{
                                 color: '#fff',
@@ -39,13 +39,13 @@
                             }}>
                             </AiFillHome>
                             <SideBarA style={{
-                        color: location === '/' ? '#1DB954' : 'gray',
+                        color: location === '/dashboard' ? '#1DB954' : 'gray',
                     }}>Home</SideBarA>
                     </Link>
-                    <Link className='links' href="/search" style={{
-                        color: location === '/search' ? '#1DB954' : 'gray',
+                    <Link className='links' href="/dashboard/search" style={{
+                        color: location === '/dashboard/search' ? '#1DB954' : 'gray',
                     }}
-                    onClick={() => setLocation('/search')}
+                    onClick={() => setLocation('/dashboard/search')}
                     >
                             <RiSearchLine size={30} style={{
                                 color: '#fff',
@@ -54,15 +54,15 @@
                             }}
                             />
                             <SideBarA style={{
-                        color: location === '/search' ? '#1DB954' : 'gray',
+                        color: location === '/dashboard/search' ? '#1DB954' : 'gray',
                             }}>
                                 Search
                             </SideBarA>
                     </Link>
-                    <Link className='links' href="/library" style={{
-                        color: location === '/library' ? '#1DB954' : 'gray',
+                    <Link className='links' href="/dashboard/library" style={{
+                        color: location === '/dashboard/library' ? '#1DB954' : 'gray',
                     }}
-                    onClick={() => setLocation('/library')}
+                    onClick={() => setLocation('/dashboard/library')}
                     >
                             <IoLibraryOutline size={30} style={{
                                 color: '#fff',
@@ -70,7 +70,7 @@
                                 left: '50px',
                             }}/>
                             <SideBarA style={{
-                        color: location === '/library' ? '#1DB954' : 'gray',
+                        color: location === '/dashboard/library' ? '#1DB954' : 'gray',
                             }}>
                                 Library
                             </SideBarA>

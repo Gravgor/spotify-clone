@@ -8,11 +8,11 @@ import Sidebar from "./components/Sidebar";
 import './style/Global.css'
 
 const spotifyFont = localFont({
-  src: './components/assets/fonts/GothamBook.ttf',
+  src: './assets/fonts/GothamBook.ttf',
 })
 
 const spotifyFontMedium = localFont({
-  src: './components/assets/fonts/GothamMedium.ttf',
+  src: './assets/fonts/GothamMedium.ttf',
 })
 
 

@@ -1,10 +1,16 @@
-import Dashboard from "./components/Dashboard";
+"use client"
+import { useEffect } from "react"
 
+export default function MainPage(){
 
-export default function mainPage(){
+    useEffect(() => {
+        setTimeout(() => {
+            window.location.replace('/dashboard')
+        },1)
+    })
     return (
         <div>
-            <Dashboard/>
+            
         </div>
     )
 

@@ -1,6 +1,7 @@
 import PocketBase from 'pocketbase';
-import './css/index.css'
-import PlaylistCard from './server-components/PlayListCard'
+import PlaylistCard from './components/server-components/PlayListCard';
+import './components/css/index.css'
+
 
 const client = new PocketBase('http://127.0.0.1:8090');
 
