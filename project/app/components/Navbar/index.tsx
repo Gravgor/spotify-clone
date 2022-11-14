@@ -1,23 +1,20 @@
 
 "use client"
-
-import { StyledBackground, StyledNavBarText, StyledRight, StyledButtonNavBarSpotify } from "./Navbar";
+import './Navbar.css'
 
 
 
 
 export default function Navbar(){
+    const token = window.sessionStorage.getItem('token')
     return (
-        <StyledBackground>
-            <StyledRight>
-                <StyledNavBarText>Premium</StyledNavBarText>
-                <StyledNavBarText>Pomoc</StyledNavBarText>
-                <StyledNavBarText>Pobierz</StyledNavBarText>
-                <StyledNavBarText>Zarejestruj się</StyledNavBarText>
-                <StyledButtonNavBarSpotify>Zaloguj się</StyledButtonNavBarSpotify>
-            </StyledRight>
-            
-
-        </StyledBackground>
+        <div className='background'>
+            <div className='right'>
+                <p className='navbartext'>Premium</p>
+                <p className='navbartext'>Pomoc</p>
+                <p className='navbartext'>Pobierz</p>
+                {token ? <button className='buttonspotify'>Wyloguj się</button> : <button className='buttonspotify'>Zaloguj</button>}
+            </div>
+        </div>
     )
 }

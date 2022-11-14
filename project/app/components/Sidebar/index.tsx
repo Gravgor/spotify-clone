@@ -3,12 +3,12 @@
     import Image from 'next/image'
     import Link from 'next/link'
     import spotifyLogo from '../../assets/logo/spotify.png'
-    import { SideBarA, StyledSidebar, StyledSideBarList, StyledSidebarLogo,StyledSideBarListTwo,SideBarATwo, StyledSideBarPlaylists, StyledFooterSideBar, StyledFooterSideBarText } from "./Sidebar"
     import {AiFillHome} from 'react-icons/ai'
     import {BsMusicNoteList} from 'react-icons/bs'
     import {RiSearchLine} from 'react-icons/ri'
     import {IoLibraryOutline} from 'react-icons/io5'
     import {BsBookmarkHeartFill} from 'react-icons/bs'
+    import './Sidebar.css'
 
 
 
@@ -18,8 +18,8 @@
         const [location, setLocation] = useState('/')
 
         return (
-            <StyledSidebar>
-                <StyledSidebarLogo>
+            <div className='sidebar'>
+                <div className='logo'>
                     <Image src={spotifyLogo} alt="Spotify Logo" width={180} height={60} style={{
                         position: 'absolute',
                         top: '30px',
@@ -27,8 +27,8 @@
                     }}
                     priority={true}
                     />
-                </StyledSidebarLogo>
-                <StyledSideBarList>
+                </div>
+                <ul className='list'>
                     <Link className='links' href="/dashboard"
                     onClick={() => setLocation('/dashboard')}
                     >
@@ -38,9 +38,9 @@
                                 left: '50px',
                             }}>
                             </AiFillHome>
-                            <SideBarA style={{
+                            <a className='aSideBar' style={{
                         color: location === '/dashboard' ? '#1DB954' : 'gray',
-                    }}>Home</SideBarA>
+                    }}>Home</a>
                     </Link>
                     <Link className='links' href="/dashboard/search" style={{
                         color: location === '/dashboard/search' ? '#1DB954' : 'gray',
@@ -53,11 +53,11 @@
                                 left: '50px',
                             }}
                             />
-                            <SideBarA style={{
+                            <a className='aSideBar' style={{
                         color: location === '/dashboard/search' ? '#1DB954' : 'gray',
                             }}>
                                 Search
-                            </SideBarA>
+                            </a>
                     </Link>
                     <Link className='links' href="/dashboard/library" style={{
                         color: location === '/dashboard/library' ? '#1DB954' : 'gray',
@@ -69,15 +69,15 @@
                                 position: 'relative',
                                 left: '50px',
                             }}/>
-                            <SideBarA style={{
+                            <a className='aSideBar' style={{
                         color: location === '/dashboard/library' ? '#1DB954' : 'gray',
                             }}>
                                 Library
-                            </SideBarA>
+                            </a>
                     </Link>
-                </StyledSideBarList>
-                <StyledSideBarListTwo>
-                        <SideBarATwo
+                </ul>
+                <ul className='listTwo'>
+                        <a className='Atwo'
                         style={{
                                 color: '#fff',
                                 position: 'relative',
@@ -94,8 +94,8 @@
 
                                 </BsMusicNoteList>
                                 Utwórz playliste
-                        </SideBarATwo>
-                            <SideBarATwo
+                        </a>
+                        <a className='Atwo'
                             style={{
                                 color: '#fff',
                                 position: 'relative',
@@ -109,17 +109,17 @@
                                     left: '-2px',
                                 }}></BsBookmarkHeartFill>
                                 Polubione Utwory
-                            </SideBarATwo>
-                </StyledSideBarListTwo>
-                <StyledSideBarPlaylists>
+                            </a>
+                </ul>
+                <div className='playlists'>
                     p
-                </StyledSideBarPlaylists>
-                <StyledFooterSideBar>
-                    <StyledFooterSideBarText>
+                </div>
+                <div className='footer'>
+                    <p className='footertext'>
                         Polityka prywatności
-                    </StyledFooterSideBarText>
-                </StyledFooterSideBar>
+                    </p>
+                </div>
             
-            </StyledSidebar>
+            </div>
         )
     }

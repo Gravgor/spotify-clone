@@ -23,14 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html className={spotifyFont.className}>
-      <head></head>
       <body>
-        <RootStyleRegistry>
-          <Navbar />
-        </RootStyleRegistry>
-        <RootStyleRegistry>
-          <Sidebar/>
-        </RootStyleRegistry>
         <RootStyleRegistry>
           {children}
           </RootStyleRegistry>
