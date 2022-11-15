@@ -31,16 +31,7 @@ export default async function Dashboard(){
             <h1 className="dashBoardTitle">Spotify Playlists</h1>
             <div className="dashBoardContentPlaylists">
                 {playlist.length > 0 ? playlist.map((playList: any) => {
-                    {playlist.map((playlist: any) => {
-                        return (
-                            <PlaylistCard 
-                                key={playlist.id}
-                                id={playlist.id}
-                                name={playlist.playlistName}
-                                description={playlist.playlistDescription}
-                            />
-                        )
-                    })}
+                    return <PlaylistCard key={playList._id} playList={playList} />
                 }) : <h1 className="dashBoardContentPlaylists__noPlaylists">Brak playlist</h1>}
             </div>                   
         </div>

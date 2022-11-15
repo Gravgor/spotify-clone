@@ -28,6 +28,8 @@ model Playlist {
   description String
   user   User   @relation(fields: [userId], references: [id])
   userId Int
+  baseColor String
+  secondColor String
   songs  Song[]
   likedPlaylists likedPlaylists[]
 }

@@ -107,3 +107,14 @@ font-weight: bold;
     text-decoration: underline;
     transition: 0.2s ease-in-out;
 }
+
+.playlist-error{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}

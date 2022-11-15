@@ -4,23 +4,25 @@ import './css/index.css'
 import { AiFillPlayCircle,AiOutlineHeart } from 'react-icons/ai'
 import { BsThreeDots } from 'react-icons/bs'
 import Link from "next/link";
-import { getPlaylist } from '../../components/Dashboard';
+import getPlaylist from '../../../../hooks/getPlaylist';
+
 
 
 export default async function PlaylistPage({params} : any){
 
     const playList = await getPlaylist(params.id);
+    console.log(playList)
     return (
         <div className="playListPage" style={{
-            backgroundImage: `linear-gradient(${playList.playListBaseColor}, ${playList.playListSecondColor})`
+            backgroundImage: `linear-gradient(${playList.baseColor}, ${playList.secondColor})`
         }}>
             <div className="playListPage__header">
                 <h1 className="playListPage__header__title">PLAYLISTA</h1>
-                <h2 className="playListPage__header__subtitle">{playList.playlistName}</h2>
-                <h3 className="playListPage__header__description">{playList.playlistDescription}</h3>
+                <h2 className="playListPage__header__subtitle">{playList.name}</h2>
+                <h3 className="playListPage__header__description">{playList.description}</h3>
                 <div className="playlistPage_header_footer">
                     <ul className="playlistPage_header_footer__list">
-                        <li className="playlistPage_header_footer__list__item">{playList.playListOwner} • {playList.playListLikes} polubienia • {playList.playListTracks.tracks.length} utworów, 0h 0m</li>
+                        <li className="playlistPage_header_footer__list__item">{playList.user} • 0 polubienia • 0 utworów, 0h 0m</li>
                     </ul>
                 </div>
             </div>
@@ -40,14 +42,14 @@ export default async function PlaylistPage({params} : any){
                         <div className="playListPage__body__tracks__list_header__title_margin">Czas trwania</div>
                     </div>
                     <div className="playListPage__body__tracks__list">
-                        {playList.playListTracks.tracks.map((track: any, index: number) => {
+                        {/*playList.songs.map((track: any, index: number) => {
                             return (
                                 <div key={track.id} className="track-item">
                                     <div className="index_trackname_artist">
                                         <div className="index_trackname_artist__index">{index + 1}</div>
                                         <div className="column">
                                            <div className="index_trackname_artist__trackname">{track.name}</div>
-                                            <div className="index_trackname_artist__artist">Oki</div>
+                                            <div className="index_trackname_artist__artist">{track.artist}</div>
                                          </div>
                                     </div>
                                     <div className="album">
@@ -55,7 +57,7 @@ export default async function PlaylistPage({params} : any){
                                     </div>
                                 </div>
                             )
-                        })}
+                        })*/}
                     </div>
                 </div>
             </div>

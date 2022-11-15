@@ -12,15 +12,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             res.status(404).json({message: 'Playlists not found'})
         }
     } else if(req.method === 'POST'){
-        const {name, description, id} = req.body
+        const {name, description, id, color1, color2} = req.body
+        const newID = parseFloat(id)
         const playlist = await db.playlist.create({
             data: {
                 name,
                 description,
-                userId: id,
+                baseColor: color1,
+                secondColor: color2,
                 user: {
                     connect: {
-                        id
+                        id: newID
                     }
                 }
             }

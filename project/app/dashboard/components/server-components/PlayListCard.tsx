@@ -6,11 +6,12 @@ import { AiFillPlayCircle } from 'react-icons/ai'
 import cover from './rapcaviar.png'
 import Link from 'next/link'
 
-export default function PlaylistCard({id, name, image, tracks, description} : any){
+export default function PlaylistCard({playList} : any){
+    const {name, description, images, id} = playList
     return (
         <div className="card-layout">
             <div className="card-image">
-            <Link href={`/playlist/${id}`}>
+            <Link href={`/dashboard/playlist/${id}`}>
             <Image src={cover} width={200} height={150} alt="Cover" className='cover'/>
             </Link>
             </div>

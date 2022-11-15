@@ -1,5 +1,5 @@
     "use client"
-    import {useMemo, useState} from 'react'
+    import {useMemo, useState, useEffect} from 'react'
     import Image from 'next/image'
     import Link from 'next/link'
     import spotifyLogo from '../../assets/logo/spotify.png'
@@ -12,10 +12,28 @@
 
 
 
-
     export default function Sidebar(){
 
-        const [location, setLocation] = useState('/')
+        const [location, setLocation] = useState('/dashboard')
+        const [playlists, setPlaylists] = useState<any>([])
+
+        useEffect(() => {
+            async function fetchData(){
+                try {
+                    const request = await fetch(`http://localhost:3000/api/user/playlists/${window.sessionStorage.getItem('id')}`, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                    })
+                    const data = await request.json()
+                    setPlaylists(data.userLikedPlylists)
+                } catch (error) {
+                    console.log(error)
+                }
+            }
+            fetchData()
+        }, [])
 
         return (
             <div className='sidebar'>
@@ -112,7 +130,19 @@
                             </a>
                 </ul>
                 <div className='playlists'>
-                    p
+                    <ul className='playlistsList'>
+                        {playlists.length > 0 ? playlists.map((playlist: any) => {
+                            return (
+                                <li className='playlist' key={playlist.id}>
+                                    <Link href={`/dashboard/playlist/${playlist.id}`}>
+                                        {playlist.name}
+                                    </Link>
+                                </li>
+                            )
+                        }) : <h1 className='playlist-error'>
+                            Nie masz jeszcze żadnych playlist
+                            </h1>}
+                    </ul>
                 </div>
                 <div className='footer'>
                     <p className='footertext'>
