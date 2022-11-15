@@ -30,7 +30,7 @@ model Playlist {
   userId Int
   baseColor String
   secondColor String
-  songs  Song[]
+  songs  Song[]  
   likedPlaylists likedPlaylists[]
 }
 
@@ -44,7 +44,7 @@ model likedPlaylists{
 
 model Song {
   id        Int      @id @default(autoincrement())
-  name      String
+  name      String @unique
   artist    String
   playlist  Playlist @relation(fields: [playlistId], references: [id])
   playlistId Int

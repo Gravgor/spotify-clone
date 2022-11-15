@@ -1,3 +1,4 @@
+
 import { NextApiRequest,  NextApiResponse} from 'next'
 import db from './db'
 
@@ -23,6 +24,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 user: {
                     connect: {
                         id: newID
+                    }
+                }
+            }
+        })
+        const song = await db.song.create({
+            data: {
+                name: 'New Song',
+                artist: 'New Artist',
+                playlist: {
+                    connect: {
+                        id: playlist.id
                     }
                 }
             }
