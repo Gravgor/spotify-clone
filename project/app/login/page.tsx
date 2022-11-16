@@ -16,7 +16,7 @@ export default function UserAuth(){
         e.preventDefault()
         const handleFetch = async () => {
             const type = 'login'
-            const res = await fetch('http://localhost:3000/api/auth',{
+            const res = await fetch('http://localhost:3000/api/user/auth',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
