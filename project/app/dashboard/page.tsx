@@ -7,7 +7,7 @@ const client = new PocketBase('http://127.0.0.1:8090');
 
 
 async function userPlaylists(){
-    const resultList = await fetch('http://localhost:3000/api/playlist', {
+    const resultList = await fetch('http://localhost:3000/api/user/playlist', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

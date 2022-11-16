@@ -2,7 +2,7 @@
 import * as jsonwebtoken from 'jsonwebtoken'
 import * as bcrypt from 'bcrypt'
 import { NextApiRequest,  NextApiResponse} from 'next'
-import db from './db'
+import db from '../db'
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
