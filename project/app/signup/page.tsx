@@ -18,7 +18,7 @@ export default function Signup(){
     const handleSubmit = (e: any) => {
         e.preventDefault()
         const handleFetch = async () => {
-            const type = "signup"
+            const type = "register"
             const res = await fetch("http://localhost:3000/api/user/auth", {
                 method: "POST",
                 headers: {
@@ -30,9 +30,7 @@ export default function Signup(){
             if(data.error){
                 setError(data.error)
             }else{
-                window.sessionStorage.setItem("token", data.token)
-                window.sessionStorage.setItem("id", data.user.id)
-                router.push("/dashboard")
+                router.push("/login")
             }
         }
         handleFetch()
@@ -47,7 +45,7 @@ export default function Signup(){
                     <input type="email" placeholder="Email" />
                     <input type="password" placeholder="Password" />
                     <input type="password" placeholder="Confirm Password" />
-                    <button type="submit">Signup</button>
+                    <button type="button" onClick={(e) => handleSubmit(e)}>Signup</button>
                     {error && <p>{error}</p>}
                 </form>
             </div>
