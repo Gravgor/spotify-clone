@@ -18,9 +18,6 @@ export default function UserAuth(){
             const type = 'login'
             const res = await fetch('http://localhost:3000/api/user/auth',{
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
                 body: JSON.stringify({email,password, type})
             })
             const data = await res.json()

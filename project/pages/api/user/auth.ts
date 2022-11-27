@@ -8,6 +8,7 @@ import db from '../db'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'POST' && req.body.type === 'login') {
         const {email, password} = req.body
+        console.log(email, password)
         const user = await db.user.findUnique({
         where: {
             email: email
