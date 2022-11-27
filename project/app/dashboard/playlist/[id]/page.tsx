@@ -7,11 +7,9 @@ import Link from "next/link";
 import getPlaylist from '../../../../hooks/getPlaylist';
 
 
-
 export default async function PlaylistPage({params} : any){
 
     const playList = await getPlaylist(params.id);
-    console.log(playList)
     return (
         <div className="playListPage" style={{
             backgroundImage: `linear-gradient(${playList.baseColor}, ${playList.secondColor})`

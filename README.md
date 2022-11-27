@@ -9,6 +9,6 @@ In the current version that you will find in this repository, you can create you
 
 # How to run
 
-Download repositorium, unpack.
+Download repository, unpack.
 
 Use command: cd project next npm run dev!
